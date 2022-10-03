@@ -5,6 +5,7 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 copyright.innerHTML = "Ki Vera Luna Pardillo " + thisYear;
 footer.appendChild(copyright);
+footer.className = 'footer_class';
 
 //List of skills
 const skills = ["HTML", "CSS", "Python", "SQL"];
@@ -13,8 +14,9 @@ const skillsList = skillsSection.querySelector('ul');
 
 for (i=0; i < skills.length; i++) {
     let skill = document.createElement('li');
+    skill.classList.add('skills_skill');
     skill.innerText = skills[i];
-    skillsList.appendChild(skill)
+    skillsList.appendChild(skill);
 
 }
 
@@ -31,6 +33,7 @@ messageForm.addEventListener('submit', (e) => {
     // console.log(name, email, message);
 
     const messageSection = document.getElementById('messages'); //display message in list 
+    messageSection.className = 'messages_section';
 
   
 
@@ -44,6 +47,7 @@ messageForm.addEventListener('submit', (e) => {
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.type = 'button';
+    removeButton.className = 'button_remove';
     
     removeButton.addEventListener('click', (e) => {
         const entry = e.target.parentNode;

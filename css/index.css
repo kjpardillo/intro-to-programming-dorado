@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(215, 234, 250);
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section {
+    padding: 3px;
+}
+
+h1 {
+    font-size: large;
+    font-weight: 600;
+    color:black;
+}
+
+h2 {
+    font-size: large;
+    font-weight: 600;
+    color:black;
+}
+
+/* styling experience list as block*/
+.list_experience {
+    display: block;
+    border-style: ridge;
+    padding: 5px;
+
+}
+
+
+
+/*styling blocks in a section*/
+.skills_class {
+    display: block;
+    border-style:ridge;
+    padding: 5px;
+   
+}
+
+/*styling form */
+.field_label {
+    display: block; 
+    font-size: medium;
+    color: darkslateblue;
+    font-weight: 600;
+    padding: 5px ;
+}
+
+/* button styling */ 
+
+.button { 
+    background-color:darkslategrey;
+    color: white; 
+    padding: 5px 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 5;
+}
+
+.button_remove { 
+    background-color:crimson;
+    color: white; 
+    padding: 5px 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 5;
+}
+
+.messages_section {
+    display: block;
+    background-color: azure;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    width: 550px;
+    margin: left;
+    
+}
+
+/* footer */
+footer {
+   padding: 5px;
+    background-color: darkgrey;
+}
+.footer_class {
+    text-align: center;
+}
+
+
+/*media queries */
+
+@media screen and(max-width: 760px) {
+    body {
+        color: azure;
+    }
+    .message_section {
+        background-color: bisque;
+        border-radius: 3px;
+
+    }
+}
