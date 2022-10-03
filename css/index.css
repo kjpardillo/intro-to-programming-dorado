@@ -1,3 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+
+.whole {
+    padding: 10px 3%;
+    margin: auto; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    transition: 0.6s;
+    margin-bottom: 5px;
+    float: right;
+    background-color: lightgray;
+
+}
+
+header.sticky {
+    padding: 5px 10px;
+    background:rgb(3, 68, 122);
+}
+
+header.sticky ul li a {
+    color: #000 ;
+}
+header .logo {
+    cursor: pointer;
+    position: relative;
+    transition: 0.6s;
+    float: left;
+    text-decoration: none;
+    background-color: bisque;
+    padding: 5px;
+    margin: 5px;
+}
+
+.logo:hover {
+    color: #0088a9; 
+}
+
+ /* nav ul */
+header .nav_links {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    background-color: bisque;
+
+}
+
+
+header .nav_links .nav_li  {
+    
+    background-color: bisque;
+    padding: 0px 20px;
+    position: relative;
+    margin: 0 5px; 
+
+}
+
+header .nav_links .nav_li .nav_a { 
+    
+    padding: 5px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease 0s;
+    float: right;
+
+}
+
+header .nav_links .nav_li .nav_a:hover {  
+    color: #0088a9
+}
+
 body {
     background-color: rgb(215, 234, 250);
     color:black;
@@ -15,28 +97,83 @@ h1 {
 }
 
 h2 {
-    font-size: large;
+    font-size: medium;
     font-weight: 600;
     color:black;
 }
 
 /* styling experience list as block*/
 .list_experience {
-    display: block;
-    border-style: ridge;
-    padding: 5px;
+    display: flex;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: stretch;
 
+}
+
+/*flex experience */
+.flexing {
+    width: 100%;
+    margin: 1em 0;
+}
+
+
+.flex-box {
+    border: 2px solid rgb(4, 60, 88) ;
+    background-color: rgb(231, 211, 187);
+    padding: 5px;
+    list-style-type: none;
+    display: inline-block;
+    width: calc(100%/ 4);
+    text-align: center;
+    margin-top: 5px;
+    flex: auto;
+
+}
+.one {
+    min-height: 100px;
+    flex-shrink: 0;
+    order: 1;
+}
+.two {
+    min-height: 100px;
+    order:2;
+}
+
+.three {
+    min-height: 100px;
+    flex-grow: 1;
+    order: 3; 
 }
 
 
 
 /*styling blocks in a section*/
-.skills_class {
-    display: block;
-    border-style:ridge;
-    padding: 5px;
-   
+.skills_ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    
 }
+.skills_ul li {
+    display: inline-block;
+    list-style-type: none;
+    border: 2px solid rgb(4, 60, 88) ;
+    background-color: rgb(84, 155, 189);
+    padding: 5px;
+    margin: 20px;
+    text-align: center;
+    width: calc(100%/5);
+}
+
+.skill_h2 {
+    text-align: center;
+}
+
 
 /*styling form */
 .field_label {
@@ -47,6 +184,7 @@ h2 {
     padding: 5px ;
 }
 
+
 /* button styling */ 
 
 .button { 
@@ -56,6 +194,10 @@ h2 {
     text-align: center;
     display: inline-block;
     font-size: 5;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
 }
 
 .button_remove { 
@@ -65,6 +207,15 @@ h2 {
     text-align: center;
     display: inline-block;
     font-size: 5;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+/* section about */
+.about {
+    margin-top: 10px;
 }
 
 .messages_section {
@@ -75,6 +226,7 @@ h2 {
     text-align: center;
     width: 550px;
     margin: left;
+    list-style-type: none;
     
 }
 
@@ -88,15 +240,58 @@ footer {
 }
 
 
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color:  #3f666b; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    }
+    
+    .sibebarbtn {
+      display: none;
+    }
+    
+    .mySidebar {
+      display: flex;
+      align-items:flex-end;
+    }
+    
+    .sideButton {
+      background-color: #3fc5a8;
+      border-radius: 3px;
+      color: white;
+      min-width: 100px;
+      padding: 0.5rem 1rem;
+      transition: opacity 0.2s ease-in-out;
+    }
+    
+    /* The sidebar links */
+    .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: whitesmoke;
+    display: block;
+    transition: 0.3s;
+    }
+
+
+
 /*media queries */
 
-@media screen and(max-width: 760px) {
-    body {
-        color: azure;
+@media screen and (max-width: 768px) {
+    .sibebarbtn {
+      display: block;
     }
-    .message_section {
-        background-color: bisque;
-        border-radius: 3px;
+    .nav_links .nav_li {
+        display: none;
+    }
 
-    }
 }

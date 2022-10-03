@@ -43,6 +43,7 @@ messageForm.addEventListener('submit', (e) => {
                            <span class="strong">${message}</span> 
                            <p><a class="link" href="mailto:${ email}">${name}</a> &nbsp;</p> 
                            </div>`
+    messageList.className ='message_section';
 
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
@@ -60,4 +61,21 @@ messageForm.addEventListener('submit', (e) => {
     messageForm.reset();
     
 });
+
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+document.getElementById("mySidebar").style.width = "0";
+document.getElementById("main").style.marginLeft = "0";
+}
 

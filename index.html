@@ -1,77 +1,115 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title> Ki Vera Pardillo Portfolio </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Ki Vera Luna Webpage">
+        <link rel="stylesheet" href="css/reset.css" />
         <link rel ="stylesheet" href="css/index.css">
     </head>
 
-<body>
+    <body>
+        <div>
+            <header>
+                <h2><a class = "logo" href = "#">Ki Vera Luna Pardillo</a></h2>
+                <nav>            
+                    <ul class ="nav_links">
+                        <li class = "nav_li"><a class="nav_a" href='#about'>About</a></li>
+                        <li class = "nav_li"><a class="nav_a" href='#experience'> Experience</a></li>
+                        <li class = "nav_li"><a class="nav_a" href='#skills'>Skills</a></li>
+                        <li class = "nav_li"><a class="nav_a" href="#projects">Projects</a></li>
+                        <li class = "nav_li"><a class="nav_a" href='#connect'> Connect</a></li>
+                        <li class = "nav_li"><a class="nav_a" href='#messages'>Messages</a></li>
+                    </ul>
+               
+                    <div id="mySidebar" class="sidebar sibebarbtn">
+                        <a class="nav_a closebtn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
+                        <a class="nav_a" href="#welcome-section">About</a>
+                        <a class="nav_a" href="#experience">Experience</a>
+                        <a class="nav_a" href="#skills">Skills</a>
+                        <a class="nav_a" href="#projects">Projects</a>
+                        <a class="nav_a" href="#connect">Connect</a>
+                        <a class="nav_a" href='#messages'>Messages</a>
+                    </div>
 
-<h1>Ki Vera Luna Pardillo</h1>
+                    <div id="main" class="sibebarbtn">
+                        <button class="sibebarbtn sideButton" onclick="openNav()">&#9776; More</button>
+                    </div>
 
-<section>
-<h1>About</h1>
-<p>My name is Ki Vera Luna. I am from the Philippines. My major is Computer Information System. </p>
-</section>
-
-<section class="list_experience">
-<h1>Experience </h1>
-<ul>
-    <li>Gateway Technology Center Receptionist</li>
-    <li>Geodetic Survey Summer Intern</li>
-</ul>
-</section>
-
-<div class=" skills_class">
-<section id = "skills" >
-    <h2> Skills</h2>
-    <ul>
-        
-    </ul>
-</div>
-
-</section>
-
-<section>
-<h1>Connect </h1>
-<a href= https://www.linkedin.com/in/kipardillo/> linkedin </a>
-</section>
-
-<section id = "contact">
-    <h2> Leave a Message</h2>
-    <form name = "leave_message">
-       
-        <label for  = leave_message> </label>
+                </nav>
 
 
-        <label class = field_label for = "name">Name</label>
-        <input type = "text" name="name" required = true> <br><br>
+            </header> <br> <br> <br>
+            <section id = "about">
+                <h1>About</h1>
+                <p>My name is Ki Vera Luna. I am from the Philippines. My major is Computer Information System. </p>
+            </section>
 
-        <label class = "field_label" for = "name">Email</label>
-        <input type = "email" name="email" required = true > <br><br>
+            <section class="list_experience" id = "experience">
+            <div class = "flexing">
+                <h1 class = "exp_h1">Experience </h1>
+                <ul class = "flexs">
+                    <li class = "flex-box one">Gateway Technology Center Receptionist</li>
+                    <li class = "flex-box two">Geodetic Survey Aplication Developer Summer Intern</li>
+                    <li class = "flex-box three">Code the Dream Student </li>
+                </ul>
+            </div>
+            </section><br><br><br><br>
 
-        <label class = "field_label" for = "message">Message</label>
-        <textarea name = "message"  required = true>
-        </textarea> <br><br>
+            <div class="flex-skills">
+                <section id = "skills" >
+                    <h1 class = "skill_h2"> Skills</h1>
+                    <ul class = "skills_ul">
+                        
+                    </ul>
+                
 
+                </section>
+            </div> <br><br><br>
 
-        <button class ="button" type = "submit"> Submit </button>
-    </form>
+            <section id = "projects">
+                <h1>Projects</h1>
+                
+            </section>
 
-</section>
+            <section id = "connect">
+                <h1>Connect </h1>
+                <a href= https://www.linkedin.com/in/kipardillo/> linkedin </a>
+            </section>
 
-<section id = "messages">
-    <h2>Messages</h2>
-    <ul>
+            <section id = "contact">
+                <h2> Leave a Message</h2>
+                <form name = "leave_message">
+                
+                    <label for  = leave_message> </label>
+                    <label class = field_label for = "name">Name</label>
+                    <input type = "text" name="name" required = true> <br><br>
 
-    </ul>
+                    <label class = "field_label" for = "name">Email</label>
+                    <input type = "email" name="email" required = true > <br><br>
 
-</section>
+                    <label class = "field_label" for = "message">Message</label>
+                    <textarea name = "message"  required = true>
+                    </textarea> <br><br>
 
-<footer> </footer>
-<script src = js/index.js></script>
-</body>
+                    <button class ="button" type = "submit"> Submit </button>
+                </form>
+
+            </section>
+
+            <section id = "messages">
+                <h2>Messages</h2>
+                <ul>
+
+                </ul>
+
+            </section>
+
+            <footer> 
+                
+            </footer> 
+        </div>
+        <script src = js/index.js> </script>
+    </body>
 </html>
