@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style> 
+    <head>
 
-body {background-color: powderblue;}
-h1 {color: black}
-
-</style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Ki Vera Luna Webpage">
-
-</head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Ki Vera Luna Webpage">
+        <link rel ="stylesheet" href="css/index.css">
+    </head>
 
 <body>
 
@@ -22,7 +17,7 @@ h1 {color: black}
 <p>My name is Ki Vera Luna. I am from the Philippines. My major is Computer Information System. </p>
 </section>
 
-<section>
+<section class="list_experience">
 <h1>Experience </h1>
 <ul>
     <li>Gateway Technology Center Receptionist</li>
@@ -30,11 +25,13 @@ h1 {color: black}
 </ul>
 </section>
 
-<section id = "skills">
+<div class=" skills_class">
+<section id = "skills" >
     <h2> Skills</h2>
     <ul>
         
     </ul>
+</div>
 
 </section>
 
@@ -43,20 +40,30 @@ h1 {color: black}
 <a href= https://www.linkedin.com/in/kipardillo/> linkedin </a>
 </section>
 
-<section>
+<section id = "contact">
     <h2> Leave a Message</h2>
     <form name = "leave_message">
+       
         <label for  = leave_message> </label>
+
+
+        <label class = field_label for = "name">Name</label>
         <input type = "text" name="name" required = true> <br><br>
+
+        <label class = "field_label" for = "name">Email</label>
         <input type = "email" name="email" required = true > <br><br>
+
+        <label class = "field_label" for = "message">Message</label>
         <textarea name = "message"  required = true>
         </textarea> <br><br>
-        <button type = "submit"> Submit </button>
+
+
+        <button class ="button" type = "submit"> Submit </button>
     </form>
 
 </section>
 
-<section id = "messages" >
+<section id = "messages">
     <h2>Messages</h2>
     <ul>
 
