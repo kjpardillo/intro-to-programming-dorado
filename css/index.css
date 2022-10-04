@@ -281,7 +281,10 @@ footer {
     display: block;
     transition: 0.3s;
     }
-
+.project_links{
+    color: inherit;
+    text-decoration: none;
+}
 
 
 /*media queries */
