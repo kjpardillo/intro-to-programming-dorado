@@ -82,20 +82,36 @@ document.getElementById("main").style.marginLeft = "0";
 
 // Lesson 6.1 AJAX Basics
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/kjpardillo/repos')
-githubRequest.send();
-githubRequest.addEventListener('load', function () {
-  const repositories = JSON.parse(this.response);
-  console.log(repositories);
-  const projectSection = document.getElementById('projects');
-  const projectList = projectSection.querySelector('ul');
+// const githubRequest = new XMLHttpRequest();
+// githubRequest.open('GET', 'https://api.github.com/users/kjpardillo/repos')
+// githubRequest.send();
+// githubRequest.addEventListener('load', function () {
+//   const repositories = JSON.parse(this.response);
+//   console.log(repositories);
+//   const projectSection = document.getElementById('projects');
+//   const projectList = projectSection.querySelector('ul');
 
-  for (let i = 0; i < repositories.length; i +=1) {
-    let project = document.createElement('li');
-    project.innerHTML = `<a class= "project_links" href="${repositories[i].html_url}">${repositories[i].name}</a>`;
+//   for (let i = 0; i < repositories.length; i +=1) {
+//     let project = document.createElement('li');
+//     project.innerHTML = `<a class= "project_links" href="${repositories[i].html_url}">${repositories[i].name}</a>`;
     
-    projectList.appendChild(project);
-  };
+//     projectList.appendChild(project);
+//   };
 
-});
+// });
+
+fetch('https://api.github.com/users/kjpardillo/repos')
+  .then((res) => res.json())
+  // .then((data) => console.log(data))
+  .then((data) => {
+    const repositories = data;
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+
+    for (let i = 0; i < repositories.length; i +=1) {
+      let project = document.createElement('li');
+      project.innerHTML = `<a class= "project_links" href="${repositories[i].html_url}">${repositories[i].name}</a>`;
+      
+      projectList.appendChild(project);
+    };
+  })
