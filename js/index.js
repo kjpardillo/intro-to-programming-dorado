@@ -39,6 +39,7 @@ messageForm.addEventListener('submit', (e) => {
 
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
+    newMessage.classList.add('message')
     newMessage.innerHTML = `<div> 
                            <span class="strong">${message}</span> 
                            <p><a class="link" href="mailto:${ email}">${name}</a> &nbsp;</p> 
